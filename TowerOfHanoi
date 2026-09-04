@@ -1,0 +1,11 @@
+public class TowerOfHanoi{
+  public void move(int n, char start, char aux, char finish){
+        if(n == 1){
+            System.out.println(start + "->" + finish);
+        }else{
+            move(n-1,start,finish,aux);
+            System.out.println(start + "->" + finish);
+            move(n-1,aux,start,finish);
+        }
+    }
+}
