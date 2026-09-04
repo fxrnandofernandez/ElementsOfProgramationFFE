@@ -1,0 +1,17 @@
+public class TowerOfShangoi{
+  public void move(int n, char start, char aux, char aux2, char finish){
+        if(n == 1){
+            System.out.println(start + "->" + finish);
+        }else if(n == 2){
+            System.out.println(start + "->" + aux);
+            System.out.println(start + "->" + finish);
+            System.out.println(aux + "->" + finish);
+        }else{
+            move(n-2,start,aux,finish,aux2);
+            System.out.println(start + "->" + aux);
+            System.out.println(start + "->" + finish);
+            System.out.println(aux + "->" + finish);
+            move(n-2,aux2,aux,start,finish);
+        }
+    }
+}
